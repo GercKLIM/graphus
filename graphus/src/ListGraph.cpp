@@ -34,7 +34,7 @@ std::vector<int> ListGraph::GetNextVertices(int vertex) const {
     return adjacencyList[vertex];
 }
 
-// Возвращает список вершин, из которых можно прийти в заданную вершину vertex
+// Метод, возвращающий список вершин, из которых можно прийти в заданную вершину vertex
 std::vector<int> ListGraph::GetPrevVertices(int vertex) const {
     std::vector<int> result;
 

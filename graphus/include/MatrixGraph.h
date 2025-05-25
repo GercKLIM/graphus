@@ -33,6 +33,6 @@ public:
     // Метод, возвращающий список вершин в которые можно прийти из заданной вершины vertex
     std::vector<int> GetNextVertices(int vertex) const override;
 
-    // Возвращает список вершин, из которых можно прийти в заданную вершину vertex
+    // Метод, возвращающий список вершин, из которых можно прийти в заданную вершину vertex
     std::vector<int> GetPrevVertices(int vertex) const override;
 };

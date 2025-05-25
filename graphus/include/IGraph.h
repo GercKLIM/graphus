@@ -15,7 +15,7 @@ struct IGraph {
     // Метод, возвращающий список вершин в которые можно прийти из заданной вершины vertex
     virtual std::vector<int> GetNextVertices(int vertex) const = 0;
 
-    // Возвращает список вершин, из которых можно прийти в заданную вершину vertex
+    // Метод, возвращающий список вершин, из которых можно прийти в заданную вершину vertex
     virtual std::vector<int> GetPrevVertices(int vertex) const = 0;
 
     // Метод копирования графа

@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.27)
-project(VK_Algorithms_hw1)
+project(graphus)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Сборка с тестированием
 add_executable(main-test
         main.cpp
         include/IGraph.h

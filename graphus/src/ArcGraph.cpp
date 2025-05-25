@@ -9,7 +9,7 @@ ArcGraph::ArcGraph(const IGraph& other) {
 
     // Проходим по всем вершинам графа
     for (int v = 0; v < other.VerticesCount(); ++v) {
-        // Получаем исходящие рёбра для текущей вершины
+        // Получаем исходящие ребра для текущей вершины
         auto next = other.GetNextVertices(v);
 
         // Добавляем каждое ребро в граф
@@ -25,7 +25,7 @@ ArcGraph::ArcGraph(const IGraph& other) {
 
 // Метод добавления ребра в граф
 void ArcGraph::AddEdge(int from, int to) {
-    // Добавляем ребро в список рёбер
+    // Добавляем ребро в список ребер
     edges.emplace_back(from, to);
 }
 
@@ -38,7 +38,7 @@ int ArcGraph::VerticesCount() const {
 std::vector<int> ArcGraph::GetNextVertices(int vertex) const {
     std::vector<int> result;
 
-    // Обходим все рёбра графа
+    // Обходим все ребра графа
     for (const auto& edge : edges) {
         // Если это исходящее ребро из vertex, то добавляем в результат
         if (edge.first == vertex)
@@ -47,11 +47,11 @@ std::vector<int> ArcGraph::GetNextVertices(int vertex) const {
     return result;
 }
 
-// Возвращает список вершин, из которых можно прийти в заданную вершину vertex
+// Метод, возвращающий список вершин, из которых можно прийти в заданную вершину vertex
 std::vector<int> ArcGraph::GetPrevVertices(int vertex) const {
     std::vector<int> result;
 
-    // Обходим все рёбра графа
+    // Обходим все ребра графа
     for (const auto& edge : edges) {
         // Если это входящее ребро в vertex, то добавляем в результат
         if (edge.second == vertex)

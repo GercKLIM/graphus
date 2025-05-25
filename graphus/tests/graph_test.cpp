@@ -74,7 +74,7 @@ void TestSimpleGraph(int& failedTestCount) {
     SortAndAssert({1, 2}, graph.GetPrevVertices(3), "GetPrevVertices", 3, failedTestCount);
 }
 
-// Тест 3: Дублирующиеся рёбра
+// Тест 3: Дублирующиеся ребра
 template <typename GraphType>
 void TestDuplicateEdges(int& failedTestCount) {
     GraphType graph(3);

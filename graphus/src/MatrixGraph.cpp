@@ -1,6 +1,6 @@
 #include "../include/MatrixGraph.h"
 
-// Явный конструктор, создающий пустой граф с заданным количеством вершин.
+// Конструктор графа с заданным количеством вершин без ребер
 MatrixGraph::MatrixGraph(int verticesCount)
         : adjacencyMatrix(verticesCount, std::vector<bool>(verticesCount, false)) {}
 
@@ -42,7 +42,7 @@ std::vector<int> MatrixGraph::GetNextVertices(int vertex) const {
     return result;
 }
 
-// Возвращает список вершин, из которых можно прийти в заданную вершину vertex
+// Метод, возвращающий список вершин, из которых можно прийти в заданную вершину vertex
 std::vector<int> MatrixGraph::GetPrevVertices(int vertex) const {
     std::vector<int> result;
 
